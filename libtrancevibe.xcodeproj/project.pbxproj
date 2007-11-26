@@ -11,29 +11,23 @@
 		C133468A0CF828650029773C /* libusb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C133467A0CF827D30029773C /* libusb.a */; };
 		C133468B0CF828720029773C /* trancevibe.c in Sources */ = {isa = PBXBuildFile; fileRef = C189C6220CF6D293009B7787 /* trancevibe.c */; };
 		C133468C0CF828740029773C /* trancevibe.h in Headers */ = {isa = PBXBuildFile; fileRef = C189C6210CF6D293009B7787 /* trancevibe.h */; };
-		C1812DB80CF7F92C00B576DC /* MaxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1812DB70CF7F92C00B576DC /* MaxAPI.framework */; };
-		C1812DBD0CF7F99000B576DC /* max_trancevibe.c in Sources */ = {isa = PBXBuildFile; fileRef = C1812DBC0CF7F99000B576DC /* max_trancevibe.c */; };
-		C1812DC50CF7FF3400B576DC /* libtrancevibe.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC0630554660B00DB518D /* libtrancevibe.dylib */; };
+		C144B7FA0CFAC4F4005B12E0 /* libtrancevibe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C13346840CF8284A0029773C /* libtrancevibe.a */; };
+		C144B8190CFAC7FE005B12E0 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C144B8180CFAC7FE005B12E0 /* Carbon.framework */; };
+		C144B81F0CFAC816005B12E0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C144B81E0CFAC816005B12E0 /* IOKit.framework */; };
+		C144B8230CFAC840005B12E0 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C144B8180CFAC7FE005B12E0 /* Carbon.framework */; };
+		C144B8E20CFAC843005B12E0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C144B81E0CFAC816005B12E0 /* IOKit.framework */; };
 		C189C6230CF6D293009B7787 /* trancevibe.h in Headers */ = {isa = PBXBuildFile; fileRef = C189C6210CF6D293009B7787 /* trancevibe.h */; };
 		C189C6240CF6D293009B7787 /* trancevibe.c in Sources */ = {isa = PBXBuildFile; fileRef = C189C6220CF6D293009B7787 /* trancevibe.c */; };
 		C189C6840CF7E4AE009B7787 /* tvtest.c in Sources */ = {isa = PBXBuildFile; fileRef = C189C6830CF7E4AE009B7787 /* tvtest.c */; };
-		C189C6980CF7E5E9009B7787 /* libtrancevibe.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC0630554660B00DB518D /* libtrancevibe.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C1812DC10CF7FF1900B576DC /* PBXContainerItemProxy */ = {
+		C144B8060CFAC5A4005B12E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC0620554660B00DB518D;
-			remoteInfo = libtrancevibe;
-		};
-		C189C6960CF7E5DB009B7787 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC0620554660B00DB518D;
-			remoteInfo = libtrancevibe;
+			remoteGlobalIDString = C13346830CF8284A0029773C /* libtrancevibe_static */;
+			remoteInfo = libtrancevibe_static;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -41,10 +35,8 @@
 		C133463F0CF811650029773C /* libusb.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libusb.dylib; path = /usr/local/lib/libusb.dylib; sourceTree = "<absolute>"; };
 		C133467A0CF827D30029773C /* libusb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libusb.a; path = /usr/local/lib/libusb.a; sourceTree = "<absolute>"; };
 		C13346840CF8284A0029773C /* libtrancevibe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtrancevibe.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1812DAC0CF7F85600B576DC /* max_trancevibe.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = max_trancevibe.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1812DAD0CF7F85600B576DC /* max_trancevibe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "max_trancevibe-Info.plist"; sourceTree = "<group>"; };
-		C1812DB70CF7F92C00B576DC /* MaxAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAPI.framework; path = /Library/Frameworks/MaxAPI.framework; sourceTree = "<absolute>"; };
-		C1812DBC0CF7F99000B576DC /* max_trancevibe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = max_trancevibe.c; path = projects/max_trancevibe/max_trancevibe.c; sourceTree = "<group>"; };
+		C144B8180CFAC7FE005B12E0 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		C144B81E0CFAC816005B12E0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		C189C6210CF6D293009B7787 /* trancevibe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trancevibe.h; path = src/trancevibe.h; sourceTree = "<group>"; };
 		C189C6220CF6D293009B7787 /* trancevibe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = trancevibe.c; path = src/trancevibe.c; sourceTree = "<group>"; };
 		C189C67D0CF7E40E009B7787 /* tvtest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tvtest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,16 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C144B8E20CFAC843005B12E0 /* IOKit.framework in Frameworks */,
+				C144B8230CFAC840005B12E0 /* Carbon.framework in Frameworks */,
 				C133468A0CF828650029773C /* libusb.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1812DAA0CF7F85600B576DC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1812DC50CF7FF3400B576DC /* libtrancevibe.dylib in Frameworks */,
-				C1812DB80CF7F92C00B576DC /* MaxAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C189C6980CF7E5E9009B7787 /* libtrancevibe.dylib in Frameworks */,
+				C144B7FA0CFAC4F4005B12E0 /* libtrancevibe.a in Frameworks */,
+				C144B8190CFAC7FE005B12E0 /* Carbon.framework in Frameworks */,
+				C144B81F0CFAC816005B12E0 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +81,8 @@
 			children = (
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C189C6790CF7E3C6009B7787 /* Examples */,
-				C1812D9A0CF7F80C00B576DC /* Projects */,
 				C189C6440CF7BC1A009B7787 /* Libraries and Frameworks */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
-				C1812DAD0CF7F85600B576DC /* max_trancevibe-Info.plist */,
 			);
 			name = libtrancevibe;
 			sourceTree = "<group>";
@@ -116,48 +101,16 @@
 			children = (
 				D2AAC0630554660B00DB518D /* libtrancevibe.dylib */,
 				C189C67D0CF7E40E009B7787 /* tvtest */,
-				C1812DAC0CF7F85600B576DC /* max_trancevibe.mxo */,
 				C13346840CF8284A0029773C /* libtrancevibe.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C1812D9A0CF7F80C00B576DC /* Projects */ = {
-			isa = PBXGroup;
-			children = (
-				C1812DA70CF7F82C00B576DC /* max_trancevibe */,
-			);
-			name = Projects;
-			sourceTree = "<group>";
-		};
-		C1812DA70CF7F82C00B576DC /* max_trancevibe */ = {
-			isa = PBXGroup;
-			children = (
-				C1812DB50CF7F90700B576DC /* Source */,
-				C1812DB60CF7F90B00B576DC /* Frameworks */,
-			);
-			name = max_trancevibe;
-			sourceTree = "<group>";
-		};
-		C1812DB50CF7F90700B576DC /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				C1812DBC0CF7F99000B576DC /* max_trancevibe.c */,
-			);
-			name = Source;
-			sourceTree = "<group>";
-		};
-		C1812DB60CF7F90B00B576DC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C1812DB70CF7F92C00B576DC /* MaxAPI.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		C189C6440CF7BC1A009B7787 /* Libraries and Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C144B81E0CFAC816005B12E0 /* IOKit.framework */,
+				C144B8180CFAC7FE005B12E0 /* Carbon.framework */,
 				C133467A0CF827D30029773C /* libusb.a */,
 				C133463F0CF811650029773C /* libusb.dylib */,
 			);
@@ -219,24 +172,6 @@
 			productReference = C13346840CF8284A0029773C /* libtrancevibe.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		C1812DAB0CF7F85600B576DC /* max_trancevibe */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C1812DB00CF7F85600B576DC /* Build configuration list for PBXNativeTarget "max_trancevibe" */;
-			buildPhases = (
-				C1812DA80CF7F85600B576DC /* Resources */,
-				C1812DA90CF7F85600B576DC /* Sources */,
-				C1812DAA0CF7F85600B576DC /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C1812DC20CF7FF1900B576DC /* PBXTargetDependency */,
-			);
-			name = max_trancevibe;
-			productName = max_trancevibe;
-			productReference = C1812DAC0CF7F85600B576DC /* max_trancevibe.mxo */;
-			productType = "com.apple.product-type.bundle";
-		};
 		C189C67C0CF7E40E009B7787 /* tvtest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C189C6810CF7E436009B7787 /* Build configuration list for PBXNativeTarget "tvtest" */;
@@ -247,7 +182,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C189C6970CF7E5DB009B7787 /* PBXTargetDependency */,
+				C144B8070CFAC5A4005B12E0 /* PBXTargetDependency */,
 			);
 			name = tvtest;
 			productName = tvtest;
@@ -285,21 +220,10 @@
 			targets = (
 				D2AAC0620554660B00DB518D /* libtrancevibe */,
 				C189C67C0CF7E40E009B7787 /* tvtest */,
-				C1812DAB0CF7F85600B576DC /* max_trancevibe */,
 				C13346830CF8284A0029773C /* libtrancevibe_static */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		C1812DA80CF7F85600B576DC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C13346810CF8284A0029773C /* Sources */ = {
@@ -307,14 +231,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C133468B0CF828720029773C /* trancevibe.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1812DA90CF7F85600B576DC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1812DBD0CF7F99000B576DC /* max_trancevibe.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,15 +253,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C1812DC20CF7FF1900B576DC /* PBXTargetDependency */ = {
+		C144B8070CFAC5A4005B12E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2AAC0620554660B00DB518D /* libtrancevibe */;
-			targetProxy = C1812DC10CF7FF1900B576DC /* PBXContainerItemProxy */;
-		};
-		C189C6970CF7E5DB009B7787 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2AAC0620554660B00DB518D /* libtrancevibe */;
-			targetProxy = C189C6960CF7E5DB009B7787 /* PBXContainerItemProxy */;
+			target = C13346830CF8284A0029773C /* libtrancevibe_static */;
+			targetProxy = C144B8060CFAC5A4005B12E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -447,63 +358,6 @@
 			};
 			name = Release;
 		};
-		C1812DAE0CF7F85600B576DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
-				HEADER_SEARCH_PATHS = "/usr/local/include/**";
-				INFOPLIST_FILE = "max_trancevibe-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Carbon,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = max_trancevibe;
-				WRAPPER_EXTENSION = mxo;
-				ZERO_LINK = YES;
-			};
-			name = Debug;
-		};
-		C1812DAF0CF7F85600B576DC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
-				HEADER_SEARCH_PATHS = "/usr/local/include/**";
-				INFOPLIST_FILE = "max_trancevibe-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Carbon,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = max_trancevibe;
-				WRAPPER_EXTENSION = mxo;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		C189C67F0CF7E40E009B7787 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -571,15 +425,6 @@
 			buildConfigurations = (
 				C13346850CF8284A0029773C /* Debug */,
 				C13346860CF8284A0029773C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C1812DB00CF7F85600B576DC /* Build configuration list for PBXNativeTarget "max_trancevibe" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C1812DAE0CF7F85600B576DC /* Debug */,
-				C1812DAF0CF7F85600B576DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
