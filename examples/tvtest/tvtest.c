@@ -1,10 +1,13 @@
 /*
- *  trancevibratortest.cpp
- *  libtrancevibrator
+ * Implementation file for Trancevibrator Test Program
  *
- *  Created by qdot on 11/2/07.
- *  Copyright 2007 __MyCompanyName__. All rights reserved.
+ * Copyright (c) 2005-2007 Kyle Machulis/Nonpolynomial Labs <kyle@nonpolynomial.com>  
  *
+ * More info on Nonpolynomial Labs @ http://www.nonpolynomial.com
+ *
+ * Sourceforge project @ http://www.sourceforge.net/projects/libtrancevibe/
+ *
+ * This file is covered by the MIT License, read LICENSE.txt for details.
  */
 
 #include "trancevibe.h"

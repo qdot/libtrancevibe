@@ -7,10 +7,7 @@
  *
  * Sourceforge project @ http://www.sourceforge.net/projects/libtrancevibe/
  *
- * This library is covered by the LGPL, read LICENSE for details.
- *
- * This file (and only this file) may alternatively be licensed under the
- * BSD license as well, read LICENSE for details.
+ * This library is covered by the MIT License, read LICENSE.txt for details.
  */
 
 #ifndef LIBTRANCEVIBE_H
