@@ -1,12 +1,10 @@
 SET(SRCS trancevibe.c)
-INCLUDE_DIRECTORIES(/usr/include /usr/local/include) 
-FIND_LIBRARY (LIBUSB NAMES usb PATHS /usr/lib /usr/local/lib)
 ADD_LIBRARY (trancevibe STATIC ${SRCS})
 ADD_LIBRARY (trancevibe_dynamic SHARED ${SRCS})
 SET_TARGET_PROPERTIES (trancevibe PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 SET_TARGET_PROPERTIES (trancevibe_dynamic PROPERTIES OUTPUT_NAME "trancevibe")
 SET_TARGET_PROPERTIES (trancevibe_dynamic PROPERTIES CLEAN_DIRECT_OUTPUT 1)
-TARGET_LINK_LIBRARIES(trancevibe usb)
-TARGET_LINK_LIBRARIES(trancevibe_dynamic usb)
+TARGET_LINK_LIBRARIES(trancevibe ${LIBUSBNAME})
+TARGET_LINK_LIBRARIES(trancevibe_dynamic ${LIBUSBNAME})
 
 
