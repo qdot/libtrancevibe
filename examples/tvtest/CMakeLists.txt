@@ -1,4 +1,4 @@
-INCLUDE_DIRECTORIES(../../src /usr/include /usr/local/include)
-LINK_DIRECTORIES(../../src /usr/lib /usr/local/lib)
+INCLUDE_DIRECTORIES(../../src ${INC_DIRS})
+LINK_DIRECTORIES(../../src ${LINK_DIRS})
 ADD_EXECUTABLE(tvtest tvtest.c)
-TARGET_LINK_LIBRARIES(tvtest usb trancevibe)
+TARGET_LINK_LIBRARIES(tvtest ${LIBUSBNAME} ${LIBTVNAME})

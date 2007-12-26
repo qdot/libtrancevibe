@@ -6,8 +6,7 @@ ADD_LIBRARY (trancevibe_dynamic SHARED ${SRCS})
 SET_TARGET_PROPERTIES (trancevibe PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 SET_TARGET_PROPERTIES (trancevibe_dynamic PROPERTIES OUTPUT_NAME "trancevibe")
 SET_TARGET_PROPERTIES (trancevibe_dynamic PROPERTIES CLEAN_DIRECT_OUTPUT 1)
-IF (LIBUSB)
-        TARGET_LINK_LIBRARIES(trancevibe usb)
-   	TARGET_LINK_LIBRARIES(trancevibe_dynamic usb)
-ENDIF (LIBUSB)
+TARGET_LINK_LIBRARIES(trancevibe usb)
+TARGET_LINK_LIBRARIES(trancevibe_dynamic usb)
+
 
