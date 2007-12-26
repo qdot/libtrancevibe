@@ -26,7 +26,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C13346830CF8284A0029773C /* libtrancevibe_static */;
+			remoteGlobalIDString = C13346830CF8284A0029773C;
 			remoteInfo = libtrancevibe_static;
 		};
 /* End PBXContainerItemProxy section */
