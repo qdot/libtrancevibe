@@ -14,6 +14,10 @@
 
 char gIsInitialized = 0;
 
+/** 
+ * libusb initialization function
+ * 
+ */
 void trancevibe_init_usb()
 {
 	usb_init();
@@ -22,6 +26,12 @@ void trancevibe_init_usb()
 	gIsInitialized = 1;
 }
 
+/** 
+ * Counts trancevibes connected to the USB busses on the system
+ * 
+ * 
+ * @return Number of trancevibes connected
+ */
 int trancevibe_get_count()
 {
 	int device_count = 0;	
@@ -45,6 +55,14 @@ int trancevibe_get_count()
 	return device_count;
 }
 
+/** 
+ * Opens the device
+ * 
+ * @param tv Pointer to store opened device handle
+ * @param device_index Index of the device to open (for multiple devices)
+ * 
+ * @return device_index on success, libusb error or ETRANCEVIBENOTCONNECTED on error
+ */
 int trancevibe_open(trancevibe* tv, unsigned int device_index)
 {
 	int device_count = 0;
@@ -78,12 +96,26 @@ int trancevibe_open(trancevibe* tv, unsigned int device_index)
 	return ETRANCEVIBENOTCONNECTED;
 }
 
+/** 
+ * Closes trancevibe passed to it
+ * 
+ * @param tv Trancevibe handle to close
+ */
 void trancevibe_close(trancevibe tv)
 {
 	if(!tv) return;
 	usb_close(tv);
 }
 
+/** 
+ * 
+ * 
+ * @param tv Trancevibe handle to send speed to
+ * @param speed Speed value to set, 0 is minimum, 255 is maximum
+ * @param timeout Timeout value for speed setting. Should be at least 1.
+ * 
+ * @return 0 or greater on success, libusb error or ETRANCEVIBENOTCONNECTED on error
+ */
 int trancevibe_set_speed(trancevibe tv, unsigned char speed, unsigned int timeout)
 {
 	if(!tv) return ETRANCEVIBENOTCONNECTED;
