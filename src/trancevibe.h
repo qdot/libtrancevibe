@@ -1,7 +1,7 @@
 /*
  * Declaration file for Trancevibrator User Space Driver
  *
- * Copyright (c) 2005-2007 Kyle Machulis/Nonpolynomial Labs <kyle@nonpolynomial.com>
+ * Copyright (c) 2005-2008 Kyle Machulis/Nonpolynomial Labs <kyle@nonpolynomial.com> (http://www.nonpolynomial.com)
  *
  * More info on Nonpolynomial Labs @ http://www.nonpolynomial.com
  *
