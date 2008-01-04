@@ -16,13 +16,15 @@
 #define TRANCEVIBE_VID 0x0b49
 #define TRANCEVIBE_PID 0x064f
 
+#define ETRANCEVIBENOTCONNECTED -5
+
 #include "usb.h"
 
 typedef usb_dev_handle* trancevibe; 
 
 int trancevibe_get_count();
 int trancevibe_open(trancevibe* dev, unsigned int device_index);
-int trancevibe_close(trancevibe dev);
+void trancevibe_close(trancevibe dev);
 int trancevibe_set_speed(trancevibe dev, unsigned char speed, unsigned int timeout);
 
 #endif //LIBTRANCEVIBE_H

@@ -16,11 +16,15 @@ http://wiki.opendildonics.org/Rez_TranceVibrator
 Library Requirements
 ====================
 
-Requires libusb
+Requires libusb and cmake
 
+libusb:
 Linux (or optionally OS X, requires modification for Universal Building):
 http://libusb.sourceforge.net
 OS X (Prebuilt Universal Package):
 http://www.ellert.se/twain-sane/
 Windows:
 http://libusb-win32.sourceforge.net/
+
+cmake:
+http://www.cmake.org

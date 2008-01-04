@@ -34,13 +34,19 @@ int main(int argc, char** argv)
 		}
 		printf("Opened device %d\n", i);
 
-		trancevibe_set_speed(tv, 0xff, 1);
+		if(trancevibe_set_speed(tv, 0xff, 1) < 0)
+		{
+			printf("Cannot write to device\n");
+		}
 #ifndef WIN32
 		sleep(1);
 #elif WIN32
 		Sleep(1000);
 #endif
-		trancevibe_set_speed(tv, 0x00, 1);
+		if(trancevibe_set_speed(tv, 0x0, 1) < 0)
+		{
+			printf("Cannot write to device\n");
+		}
 		trancevibe_close(tv);
 	}
 	return 0;

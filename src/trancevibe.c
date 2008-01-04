@@ -75,18 +75,17 @@ int trancevibe_open(trancevibe* tv, unsigned int device_index)
 			}
 		}
 	}	
-	return -1;
+	return ETRANCEVIBENOTCONNECTED;
 }
 
-int trancevibe_close(trancevibe tv)
+void trancevibe_close(trancevibe tv)
 {
-	if(!tv) return -1;
+	if(!tv) return;
 	usb_close(tv);
-	return 0;
 }
 
 int trancevibe_set_speed(trancevibe tv, unsigned char speed, unsigned int timeout)
 {
-	if(!tv) return -1;
+	if(!tv) return ETRANCEVIBENOTCONNECTED;
 	return usb_control_msg(tv, USB_ENDPOINT_OUT | USB_TYPE_VENDOR | USB_RECIP_INTERFACE, 1, speed, 0, 0, 0, timeout);
 }

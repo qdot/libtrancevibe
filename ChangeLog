@@ -1,5 +1,5 @@
 libtrancevibe ChangeLog
 =======================
 
-2007-12-26 Kyle Machulis <kyle@nonpolynomial.com>
-	* Created first release of trancevibe library and source distribution
+2008-01-03 Kyle Machulis <kyle@nonpolynomial.com>
+	* First release of libtrancevibe project, includes source files and cmake build system
