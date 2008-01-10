@@ -2,6 +2,13 @@
 libtrancevibe
 =============
 
+by Kyle Machulis <kyle@nonpolynomial.com>
+Nonpolynomial Labs - http://www.nonpolynomial.com
+
+===========
+Description
+===========
+
 libtrancevibe is a C-based development library for the Rez Trancevibrator, a USB powered and controlled vibrator originally distributed for use with the game Rez for the Playstation2. 
 
 libtrancevibe works with both the original ASCII Rez Trancevibrator, as well as the Drmn Trance Vibrator (http://tim.cexx.org/projects/vibe/)
