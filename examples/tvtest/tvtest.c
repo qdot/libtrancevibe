@@ -34,7 +34,7 @@ int main(int argc, char** argv)
 		}
 		printf("Opened device %d\n", i);
 
-		if(trancevibe_set_speed(tv, 0xff, 1) < 0)
+		if(trancevibe_set_speed(tv, 0xff, 10) < 0)
 		{
 			printf("Cannot write to device\n");
 		}
@@ -43,7 +43,7 @@ int main(int argc, char** argv)
 #elif WIN32
 		Sleep(1000);
 #endif
-		if(trancevibe_set_speed(tv, 0x0, 1) < 0)
+		if(trancevibe_set_speed(tv, 0x0, 10) < 0)
 		{
 			printf("Cannot write to device\n");
 		}

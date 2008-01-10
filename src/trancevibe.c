@@ -11,6 +11,7 @@
  */
 
 #include "trancevibe.h"
+#include <stdio.h>
 
 char gIsInitialized = 0;
 
@@ -20,7 +21,7 @@ char gIsInitialized = 0;
  */
 void trancevibe_init_usb()
 {
-	if(gIsInitialized) usb_init();
+	if(!gIsInitialized) usb_init();
     usb_find_busses();
     usb_find_devices();
 	gIsInitialized = 1;
@@ -37,7 +38,7 @@ int trancevibe_get_count()
 	for (bus = usb_get_busses(); bus != 0; bus = bus->next) 
 	{			
 		for (dev = bus->devices; dev != 0; dev = dev->next) 
-		{	
+		{
 			if (dev->descriptor.idVendor == TRANCEVIBE_VID && dev->descriptor.idProduct == TRANCEVIBE_PID)
 			{
 				++device_count;
