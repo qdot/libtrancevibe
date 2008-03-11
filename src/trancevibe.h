@@ -27,6 +27,11 @@
 /// Typedef for the libusb handle, to make code more readable
 typedef usb_dev_handle* trancevibe; 
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
 /** 
  * Counts trancevibes connected to the USB busses on the system
  * 
@@ -63,4 +68,8 @@ void trancevibe_close(trancevibe dev);
  */
 int trancevibe_set_speed(trancevibe dev, unsigned char speed, unsigned int timeout);
 
+#ifdef __cplusplus
+}
+#endif
+	
 #endif //LIBTRANCEVIBE_H
