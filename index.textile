@@ -1,5 +1,5 @@
 ---
 layout: front
 project: libtrancevibe
-title: Crossplatform, open source driver for the Rez Trancevibrator
+title: Open source driver for the Rez Trancevibrator
 ---
