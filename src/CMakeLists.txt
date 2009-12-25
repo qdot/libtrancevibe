@@ -1,20 +1,15 @@
+######################################################################################
+# Build function for main library
+######################################################################################
+
 SET(SRCS trancevibe.c)
-ADD_LIBRARY (trancevibe STATIC ${SRCS})
-ADD_LIBRARY (trancevibe_dynamic SHARED ${SRCS})
-SET_TARGET_PROPERTIES (trancevibe PROPERTIES CLEAN_DIRECT_OUTPUT 1)
-SET_TARGET_PROPERTIES (trancevibe PROPERTIES OUTPUT_NAME "trancevibe_s")
-SET_TARGET_PROPERTIES (trancevibe_dynamic PROPERTIES OUTPUT_NAME "trancevibe")
-SET_TARGET_PROPERTIES (trancevibe_dynamic PROPERTIES CLEAN_DIRECT_OUTPUT 1)
-SET_TARGET_PROPERTIES (trancevibe_dynamic PROPERTIES VERSION ${LIBTVVERSION})
-IF(NOT WIN32)
-  INSTALL(TARGETS trancevibe trancevibe_dynamic LIBRARY DESTINATION "/usr/local/lib" ARCHIVE DESTINATION "/usr/local/lib")
-  INSTALL(FILES trancevibe.h DESTINATION "/usr/local/include")
-  IF(APPLE)
-	SET_TARGET_PROPERTIES(trancevibe_dynamic PROPERTIES INSTALL_NAME_DIR "/usr/local/lib")
-	SET_TARGET_PROPERTIES(trancevibe_dynamic PROPERTIES LINK_FLAGS "-compatibility_version 1.0.0 -current_version 1.${LIBTVVERSION}")
-  ENDIF(APPLE)
-ENDIF(NOT WIN32)
-TARGET_LINK_LIBRARIES(trancevibe ${LIBUSBNAME})
-TARGET_LINK_LIBRARIES(trancevibe_dynamic ${LIBUSBNAME})
-
-
+BUILDSYS_BUILD_LIB(
+  NAME trancevibe
+  SOURCES "${SRCS}" 
+  CXX_FLAGS FALSE
+  LINK_LIBS ${LIBTRANCEVIBE_DEP_LIBS}
+  LINK_FLAGS FALSE
+  DEPENDS FALSE
+  SHOULD_INSTALL TRUE
+  VERSION "${LIBTRANCEVIBE_VERSION}"
+  )
