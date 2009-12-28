@@ -28,13 +28,15 @@ Library Requirements
 Requires libusb and cmake (for building)
 
 ------
-libusb
+libusb-1.0 (Linux and OS X)
 ------
-Linux (or optionally OS X, requires modification for Universal Building):
-http://libusb.sourceforge.net
-OS X (Prebuilt Universal Package):
-http://www.ellert.se/twain-sane/
-Windows:
+
+http://www.libusb.org
+
+------
+libusb-win32 (Windows, legacy until winusb supported in libusb-1.0)
+------
+
 http://libusb-win32.sourceforge.net/
 
 -----

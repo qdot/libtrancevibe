@@ -57,15 +57,15 @@ OPTION(BUILD_EXAMPLES "Build libtrancevibe examples" ON)
 # Project specific package finding
 ######################################################################################
 
-# IF(NOT WIN32)
-#   FIND_PACKAGE(libusb-1.0 REQUIRED)
-#   INCLUDE_DIRECTORIES(${LIBUSB_1_INCLUDE_DIRS})
-#   SET(LIBTRANCEVIBE_DEP_LIBS ${LIBUSB_1_LIBRARIES})
-# ELSE()
+IF(NOT WIN32)
+  FIND_PACKAGE(libusb-1.0 REQUIRED)
+  INCLUDE_DIRECTORIES(${LIBUSB_1_INCLUDE_DIRS})
+  SET(LIBTRANCEVIBE_DEP_LIBS ${LIBUSB_1_LIBRARIES})
+ELSE()
   FIND_PACKAGE(libusb REQUIRED)
   INCLUDE_DIRECTORIES(${LIBUSB_INCLUDE_DIRS})
   SET(LIBTRANCEVIBE_DEP_LIBS ${LIBUSB_LIBRARIES})
-# ENDIF()                         
+ENDIF()                         
 
 ######################################################################################
 # Project specific globals

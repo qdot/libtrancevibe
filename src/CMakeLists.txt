@@ -2,7 +2,12 @@
 # Build function for main library
 ######################################################################################
 
-SET(SRCS trancevibe.c)
+IF(NOT WIN32)
+  SET(SRCS trancevibe_libusb1.c nputil_libusb1.c)
+ELSE()
+  SET(SRCS trancevibe_libusb.c)
+ENDIF()
+
 BUILDSYS_BUILD_LIB(
   NAME trancevibe
   SOURCES "${SRCS}" 

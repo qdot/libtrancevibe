@@ -20,14 +20,14 @@
 
 int main(int argc, char** argv)
 {
-	trancevibe tv;
 	int device_count;
 	int i;
-	device_count = trancevibe_get_count();
+	trancevibe* tv = trancevibe_create();
+	device_count = trancevibe_get_count(tv);
 	printf("Devices: %d\n", device_count);
 	for(i = 0; i < device_count; ++i)
 	{
-		if(trancevibe_open(&tv, i) < 0)
+		if(trancevibe_open(tv, i) < 0)
 		{
 			printf("Cannot open device %d\n", i);
 			break;
@@ -48,6 +48,8 @@ int main(int argc, char** argv)
 			printf("Cannot write to device\n");
 		}
 		trancevibe_close(tv);
+
 	}
+	trancevibe_delete(tv);
 	return 0;
 }
