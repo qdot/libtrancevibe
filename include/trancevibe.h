@@ -19,16 +19,19 @@
 #define TRANCEVIBE_PID 0x064f
 
 /// Error code for non-connected trancevibes
-#define ETRANCEVIBENOTCONNECTED -5
+#define E_NPUTIL_DRIVER_ERROR -1
+#define E_NPUTIL_NOT_INITED -2
+#define E_NPUTIL_NOT_OPENED -3
 
 /// Typedef for nputil struct, to make code more readable
-#ifdef LIBUSB_0.1
-#include "nputil_libusb.h"
-typedef nputil_libusb_struct* trancevibe; 
-#else
-#include "nputil_libusb1.h"
-typedef nputil_libusb1_struct trancevibe;
-#endif
+typedef struct {
+	struct libusb_context* _context;
+	struct libusb_device_handle* _device;
+	struct libusb_transfer* _in_transfer;
+	struct libusb_transfer* _out_transfer;
+	int _is_open;
+	int _is_inited;
+} trancevibe;
 
 #ifdef __cplusplus
 extern "C" {
@@ -71,7 +74,7 @@ extern "C" {
  * 
  * @param tv Trancevibe handle to close
  */
-	void trancevibe_close(trancevibe* dev);
+	int trancevibe_close(trancevibe* dev);
 
 /** 
  * Sets speed for the trance vibrator handle passed to it
