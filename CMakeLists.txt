@@ -42,13 +42,7 @@ INITIALIZE_BUILD()
 #Common Options
 
 OPTION_LIBRARY_BUILD_STATIC(ON)
-#We can't build shared on MSVC yet
-IF(NOT MSVC)
-  OPTION_LIBRARY_BUILD_SHARED(ON)
-ENDIF(NOT MSVC)
-OPTION_FAST_MATH(ON)
-OPTION_ARCH_OPTS(ON)
-OPTION_GPROF(OFF)
+OPTION_LIBRARY_BUILD_SHARED(ON)
 
 #Project specific options
 OPTION(BUILD_EXAMPLES "Build libtrancevibe examples" ON)
@@ -57,15 +51,9 @@ OPTION(BUILD_EXAMPLES "Build libtrancevibe examples" ON)
 # Project specific package finding
 ######################################################################################
 
-IF(NOT WIN32)
-  FIND_PACKAGE(libusb-1.0 REQUIRED)
-  INCLUDE_DIRECTORIES(${LIBUSB_1_INCLUDE_DIRS})
-  SET(LIBTRANCEVIBE_DEP_LIBS ${LIBUSB_1_LIBRARIES})
-ELSE()
-  FIND_PACKAGE(libusb REQUIRED)
-  INCLUDE_DIRECTORIES(${LIBUSB_INCLUDE_DIRS})
-  SET(LIBTRANCEVIBE_DEP_LIBS ${LIBUSB_LIBRARIES})
-ENDIF()                         
+FIND_PACKAGE(libusb-1.0 REQUIRED)
+INCLUDE_DIRECTORIES(${LIBUSB_1_INCLUDE_DIRS})
+SET(LIBTRANCEVIBE_DEP_LIBS ${LIBUSB_1_LIBRARIES})
 
 ######################################################################################
 # Project specific globals
@@ -73,8 +61,8 @@ ENDIF()
 
 #library definitions
 
-SET(LIBTRANCEVIBE_MAJOR_VERSION 0)
-SET(LIBTRANCEVIBE_MINOR_VERSION 5)
+SET(LIBTRANCEVIBE_MAJOR_VERSION 1)
+SET(LIBTRANCEVIBE_MINOR_VERSION 0)
 SET(LIBTRANCEVIBE_BUILD_VERSION 0)
 
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include)

@@ -12,6 +12,8 @@
 #ifndef LIBTRANCEVIBE_H
 #define LIBTRANCEVIBE_H
 
+#include "libusb-1.0/libusb.h"
+
 /// USB Vendor ID for the Trance Vibrator
 #define TRANCEVIBE_VID 0x0b49
 
