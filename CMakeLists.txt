@@ -89,6 +89,8 @@ LINK_DIRECTORIES(${LIBRARY_OUTPUT_PATH})
 #If we build libusb staticly on apple, we need the proper frameworks
 IF(BUILD_STATIC AND APPLE)
   LIST(APPEND LIBTRANCEVIBE_DEP_LIBS "-framework IOKit" "-framework CoreFoundation")
+ELSEIF(WIN32)
+  LIST(APPEND LIBTRANCEVIBE_DEP_LIBS "setupapi.lib")
 ENDIF(BUILD_STATIC AND APPLE)
 
 ADD_SUBDIRECTORY(src)
