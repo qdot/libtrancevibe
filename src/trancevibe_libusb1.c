@@ -11,7 +11,6 @@
 
 
 #include "trancevibe.h"
-#include "nputil/nputil_libusb1.h"
 #include <stdio.h>
 
 #define NPUTIL_DEVICE_NAME trancevibe
