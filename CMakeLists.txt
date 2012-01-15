@@ -5,30 +5,17 @@
 #Require 2.6 or higher. 
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6.0 FATAL_ERROR)
 
-#See if we've got our cmake modules checked out. If not, advise to do so.
-IF(EXISTS "${CMAKE_SOURCE_DIR}/../compily_buildd/cmake")
-  SET(BUILDSYS_CMAKE_DIR "${CMAKE_SOURCE_DIR}/../compily_buildd/cmake")
-  MESSAGE(STATUS "Using outside compily_buildd directory ${BUILDSYS_CMAKE_DIR}")
-ELSEIF(EXISTS "${CMAKE_SOURCE_DIR}/compily_buildd/cmake")
-  SET(BUILDSYS_CMAKE_DIR "${CMAKE_SOURCE_DIR}/compily_buildd/cmake")
-  MESSAGE(STATUS "Using compily_buildd git submodule ${BUILDSYS_CMAKE_DIR}")
-ELSE(EXISTS "${CMAKE_SOURCE_DIR}/compily_buildd/cmake")
-  MESSAGE(FATAL_ERROR 
-    "Cannot find compily_buildd directory for np labs project compilation functions.\n"
-    "Make sure you've either put the compily_buildd directory in the same root as your repository directory, or that you've used the compily_buildd submodule (git submodule update --init).\n"
-    "NP Labs build repository is available at git://github.com/qdot/compily_buildd.git"
-    )
-ENDIF(EXISTS "${CMAKE_SOURCE_DIR}/../compily_buildd/cmake")
-
-LIST(APPEND CMAKE_MODULE_PATH ${BUILDSYS_CMAKE_DIR})
-
-INCLUDE( ${BUILDSYS_CMAKE_DIR}/BuildSysCMakeLib.cmake )
-
 #setting link directory policy
 
 IF(COMMAND cmake_policy)
   CMAKE_POLICY(SET CMP0003 NEW)
 ENDIF(COMMAND cmake_policy)
+
+# Add our repository cmake_modules directory
+LIST(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake_modules)
+
+# Add local macros and project options
+INCLUDE(${CMAKE_CURRENT_SOURCE_DIR}/BuildSysCmakeLib.cmake)
 
 ######################################################################################
 # Project declaration and options
@@ -44,11 +31,8 @@ INITIALIZE_BUILD()
 OPTION_LIBRARY_BUILD_STATIC(ON)
 #We can't build shared on MSVC yet
 IF(NOT MSVC)
-  OPTION_LIBRARY_BUILD_SHARED(ON)
+  OPTION_LIBRARY_BUILD_SHARED(OFF)
 ENDIF(NOT MSVC)
-OPTION_FAST_MATH(ON)
-OPTION_ARCH_OPTS(ON)
-OPTION_GPROF(OFF)
 
 #Project specific options
 OPTION(BUILD_EXAMPLES "Build libtrancevibe examples" ON)
