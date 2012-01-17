@@ -1,16 +1,16 @@
 /*
  * Implementation file for Trancevibrator User Space Driver
  *
- * Copyright (c) 2005-2008 Kyle Machulis/Nonpolynomial Labs <kyle@nonpolynomial.com> (http://www.nonpolynomial.com)
+ * Copyright (c) 2005-2012 Kyle Machulis/Nonpolynomial Labs <kyle@nonpolynomial.com> (http://www.nonpolynomial.com)
  *
  * More info on Nonpolynomial Labs @ http://www.nonpolynomial.com
  *
- * Sourceforge project @ http://www.sourceforge.net/projects/libtrancevibe/
+ * Project website @ http://libtrancevibe.nonpolynomial.com
  *
- * This library is covered by the MIT License, read LICENSE.txt for details.
+ * This library is covered by the BSD License, read LICENSE.txt for details.
  */
 
-#include "trancevibe.h"
+#include "trancevibe/trancevibe.h"
 #include <stdio.h>
 
 char gIsInitialized = 0;

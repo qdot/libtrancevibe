@@ -1,16 +1,16 @@
 /*
  * Implementation file for Trancevibrator Test Program
  *
- * Copyright (c) 2005-2007 Kyle Machulis/Nonpolynomial Labs <kyle@nonpolynomial.com>  
+ * Copyright (c) 2005-2012 Kyle Machulis/Nonpolynomial Labs <kyle@nonpolynomial.com>  
  *
  * More info on Nonpolynomial Labs @ http://www.nonpolynomial.com
  *
- * Sourceforge project @ http://www.sourceforge.net/projects/libtrancevibe/
+ * Github project @ http://www.github.com/qdot/libtrancevibe
  *
- * This file is covered by the MIT License, read LICENSE.txt for details.
+ * This file is covered by the BSD License, read LICENSE.txt for details.
  */
 
-#include "trancevibe.h"
+#include "trancevibe/trancevibe.h"
 #ifndef WIN32
 #include "unistd.h"
 #elif WIN32
